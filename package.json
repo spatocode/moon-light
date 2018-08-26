@@ -1,7 +1,9 @@
 {
-  "name": "AwesomeProject",
-  "version": "0.1.0",
+  "name": "moon-light",
+  "version": "1.0.0",
   "private": true,
+  "author": "Ekene Izukanne",
+  "description": "A cross-platform mobile application for checking the weather condition of a location using its zip code.",
   "devDependencies": {
     "react-native-scripts": "1.14.0",
     "jest-expo": "~27.0.0",
