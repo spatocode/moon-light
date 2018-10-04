@@ -26,3 +26,32 @@ export default class Weather extends Component {
           );
     }
 }
+
+const baseFontSize = 16;
+
+const styles = StyleSheet.create({
+  container: { flex: 1, alignItems: "center", paddingTop: 30 },
+  backdrop: { flex: 1, flexDirection: "column" },
+  overlay: {
+    paddingTop: 5,
+    backgroundColor: "#000000",
+    opacity: 0.5,
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "flex-start",
+    padding: 60
+  },
+  zipContainer: {
+    height: baseFontSize + 10,
+    borderBottomColor: "#DDDDDD",
+    borderBottomWidth: 1,
+    marginLeft: 5,
+    marginTop: 3
+  },
+  zipCode: { flex: 1, flexBasis: 1, width: 50, height: baseFontSize },
+  mainText: { fontSize: baseFontSize, color: "#FFFFFF" }
+});
