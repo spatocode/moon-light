@@ -19,4 +19,21 @@ class Forecast extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+    container: { height: 130 },
+    bigText: {
+      flex: 2,
+      fontSize: 20,
+      textAlign: "center",
+      margin: 5,
+      color: "#FFFFFF"
+    },
+    mainText: {
+        flex: 1,
+        fontSize: 16,
+        textAlign: "center",
+        color: "#FFFFFF",
+      }
+  });
+
 export default Forecast;
