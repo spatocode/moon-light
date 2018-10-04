@@ -1,10 +1,22 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, TextInput, View, ImageBackground } from 'react-native';
+import Forecast from "./Forecast";
+import FetchForecast from './FetchForcast';
 
 export default class Weather extends Component {
     constructor(props) {
         super(props);
+        this.state = { zip: "", forecast: null};
     }
+
+    handleInput = event => {
+        let zip = event.nativeEvent.text;
+        this.setState({zip})
+        FetchForecast.fetchForecast(zip).then(forecast => {
+            this.setState({ forecast: forecast });
+        });
+    }
+    
     render() {
         return (
             <View style={styles.container}>
@@ -15,7 +27,7 @@ export default class Weather extends Component {
                         Current weather for
                     </Text>
                     <View style={styles.zipContainer}>
-                      <TextInput style={[styles.zipCode, styles.mainText]} onSubmitEditing={this._handleTextChange} 
+                      <TextInput style={[styles.zipCode, styles.mainText]} onSubmitEditing={this.handleInput} 
                                   underlineColorAndroid="transparent"/>
                     </View>
                   </View>
