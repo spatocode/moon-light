@@ -16,8 +16,17 @@ export default class Weather extends Component {
             this.setState({ forecast: forecast });
         });
     }
-    
+
     render() {
+        let content = null;
+        if (this.state.forecast !== null) {
+        content = (
+            <Forecast
+            main={this.state.forecast.main}
+            description={this.state.forecast.description}
+            temp={this.state.forecast.temp}
+            />
+        )
         return (
             <View style={styles.container}>
               <ImageBackground source={require('./AppBg.jpg')} resizeMode='cover' style={styles.backdrop}>
