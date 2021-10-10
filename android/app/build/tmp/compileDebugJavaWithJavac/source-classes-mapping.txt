@@ -1,0 +1,14 @@
+com/focux/MainActivity.java
+ com.clima.MainActivity
+com/focux/ReactNativeFlipper.java
+ com.clima.ReactNativeFlipper
+ com.clima.ReactNativeFlipper$1
+ com.clima.ReactNativeFlipper$2
+ com.clima.ReactNativeFlipper$2$1
+com/focux/MainApplication.java
+ com.clima.MainApplication
+ com.clima.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/clima/BuildConfig.java
+ com.clima.BuildConfig
