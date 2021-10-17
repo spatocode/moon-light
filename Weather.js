@@ -48,13 +48,13 @@ export default class Weather extends Component {
     });
 
     if (this.state.forecast !== null) {
-        content = (
-            <Forecast
-              main={this.state.forecast.main}
-              description={this.state.forecast.description}
-              temp={this.state.forecast.temp}
-            />
-        )
+      content = (
+        <Forecast
+          main={this.state.forecast.main}
+          description={this.state.forecast.description}
+          temp={this.state.forecast.temp}
+        />
+      )
     }
 
     return (
