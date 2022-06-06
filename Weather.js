@@ -21,30 +21,36 @@ export default class Weather extends Component {
     let content = null;
     const baseFontSize = 16;
     const styles = StyleSheet.create({
-      container: { flex: 1, alignItems: "center", paddingTop: 30 },
-      backdrop: { flex: 1, flexDirection: "column" },
-      overlay: {
-        paddingTop: 5,
-        backgroundColor: "#000000",
-        opacity: 0.5,
-        flexDirection: "column",
-        alignItems: "center"
+      container: {
+        flex: 1,
+        alignItems: "center",
+        // paddingTop: 30
       },
+      backdrop: { flex: 1, flexDirection: "column" },
+      overlay: {},
       row: {
-        flexDirection: "row",
+        flexDirection: "column",
         flexWrap: "nowrap",
         alignItems: "flex-start",
-        padding: 60
+        padding: 100
       },
       zipContainer: {
-        height: baseFontSize + 10,
-        borderBottomColor: "#DDDDDD",
-        borderBottomWidth: 1,
-        marginLeft: 5,
-        marginTop: 3
+        alignItems: "center",
       },
-      zipCode: { flex: 1, flexBasis: 1, width: 50, height: baseFontSize },
-      mainText: { fontSize: baseFontSize, color: "#FFFFFF" }
+      zipCode: {
+        // flex: 1,
+        // flexBasis: 1,
+        width: 200,
+        height: 40,
+        color: "#FFFFFF",
+        backgroundColor: "#000000",
+        opacity: 0.5,
+      },
+      mainText: {
+        fontSize: baseFontSize*2.5,
+        color: "#FFFFFF",
+        marginBottom: 200
+      }
     });
 
     if (this.state.forecast !== null) {
@@ -63,10 +69,12 @@ export default class Weather extends Component {
           <View style={styles.overlay}>
             <View style={styles.row}>
               <Text style={styles.mainText}>
-                Current weather for
+                MoonLight
               </Text>
               <View style={styles.zipContainer}>
-                <TextInput style={[styles.zipCode, styles.mainText]} onSubmitEditing={this.handleInput} 
+                <Text style={{color: "#FFFFFF", marginBottom: 25}}>Enter a zip code</Text>
+                <TextInput style={styles.zipCode} onSubmitEditing={this.handleInput} 
+                  textAlign="center" autoFocus={true} keyboardType="numeric"
                   underlineColorAndroid="transparent"/>
               </View>
             </View>
